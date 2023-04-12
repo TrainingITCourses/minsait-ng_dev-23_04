@@ -2,6 +2,15 @@
 
 Curso de introducción a Angular para Minsait Abril2023
 
+| FECHA      | HORARIO       | Horas |
+| ---------- | ------------- | ----- |
+| MIE 12 ABR | 16:00 – 19:00 | 3     |
+| VIE 14 ABR | 09:30 – 13:30 | 4     |
+| MIE 19 ABR | 16:00 – 19:00 | 3     |
+| VIE 21 ABR | 09:30 – 13:30 | 4     |
+| MIE 26 ABR | 16:00 – 19:00 | 3     |
+| VIE 28 ABR | 09:30 – 13:30 | 4     |
+
 ## Sample Repository
 
 [Repository on GitHub](https://github.com/TrainingITCourses/minsait-ng_dev-23_04)
