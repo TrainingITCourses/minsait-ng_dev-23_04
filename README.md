@@ -48,7 +48,7 @@ npm start
 
 ---
 
-## 🛠 (VS Code .dotfiles)[https://github.com/AlbertoBasalo/dotfiles]
+## 🛠 [VS Code .dotfiles](https://github.com/AlbertoBasalo/dotfiles)
 
 ### ⚙️ Settings
 
