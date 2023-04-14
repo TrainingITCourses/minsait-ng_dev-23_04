@@ -30,18 +30,8 @@ npm install -g @angular/cli
 ng new your-name
 ```
 
-## Use v12 clone for Node < 16
-
 ```bash
-cd ng-v12
-npm install
-npm start
-```
-
-## Use v14 clone for Node > 16
-
-```bash
-cd ng-v14
+cd minsait-ng_dev-23_04
 npm install
 npm start
 ```
