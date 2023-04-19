@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ACTIVITIES } from '../data/activities.data';
+import { Activity } from '../data/activity.type';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  activities: any[] = [];
+  activities: Activity[] = ACTIVITIES;
 
-  constructor() {}
+  constructor() {
+    console.log(JSON.stringify(this.activities));
+  }
 
   ngOnInit(): void {}
 }
