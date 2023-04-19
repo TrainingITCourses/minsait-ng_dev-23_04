@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Activity } from '../../data/activity.type';
+import { ACTIVITY_EMPTY, Activity } from '../../data/activity.type';
 
 @Component({
   selector: 'app-activity-item',
@@ -7,7 +7,7 @@ import { Activity } from '../../data/activity.type';
   styleUrls: ['./activity-item.component.css'],
 })
 export class ActivityItemComponent implements OnInit {
-  @Input() activity!: Activity;
+  @Input() activity: Activity = ACTIVITY_EMPTY;
 
   constructor() {}
 
