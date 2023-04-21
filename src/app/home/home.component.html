@@ -2,6 +2,7 @@
   [counter]="activities.length"
   caption="Activities !"
   (sort)="onSort()"
+  (search)="onSearch($event)"
 ></app-list-header>
 <ul>
   <li *ngFor="let a of activities">

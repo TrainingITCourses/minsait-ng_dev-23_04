@@ -21,4 +21,9 @@ export class HomeComponent implements OnInit {
       (a, b) => (a.price - b.price) * this.sortOrder
     );
   }
+  onSearch(searchTerm: string) {
+    this.activities = ACTIVITIES.filter((a) =>
+      a.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
 }

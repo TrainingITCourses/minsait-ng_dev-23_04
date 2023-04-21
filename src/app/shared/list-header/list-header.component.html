@@ -1,4 +1,5 @@
 <div>
   <h3>List of {{ counter }} {{ caption }}</h3>
+  <input type="search" (keyup)="onSearchKeyUp($event)" />
   <button id="sort" (click)="onSortClick()">Sort by price ↕️</button>
 </div>
