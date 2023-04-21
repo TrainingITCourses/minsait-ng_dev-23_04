@@ -75,6 +75,7 @@ ng g c layout/footer
 ```bash
 ng g m shared
 ng g c shared/activity-item --export
+ng g c shared/list-header --export
 ```
 
 ## 2 - Templates
@@ -88,7 +89,12 @@ Home page with list of published activities
 ```typescript
 export type Id = string | number;
 export type AgeCategory = "adult" | "child" | "family";
-export type ActivityStates = "draft" | "published" | "cancelled" | "confirmed" | "finished";
+export type ActivityStates =
+  | "draft"
+  | "published"
+  | "cancelled"
+  | "confirmed"
+  | "finished";
 export type Activity = {
   ageCategory: AgeCategory;
   currency: string;
