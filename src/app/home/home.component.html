@@ -1,4 +1,12 @@
 <h3>List of activities</h3>
+<div>
+  <p>
+    <span>
+      {{ activities.length }}
+    </span>
+    <button (click)="onSort()">Sort by price ↕️</button>
+  </p>
+</div>
 <ul>
   <li *ngFor="let a of activities">
     <app-activity-item [activity]="a"></app-activity-item>

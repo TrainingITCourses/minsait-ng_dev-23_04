@@ -9,10 +9,18 @@ import { Activity } from '../data/activity.type';
 })
 export class HomeComponent implements OnInit {
   activities: Activity[] = ACTIVITIES;
-
+  private sortOrder = 1;
   constructor() {
     console.log(JSON.stringify(this.activities));
   }
 
   ngOnInit(): void {}
+
+  onSort() {
+    console.log('order click');
+    this.sortOrder = -this.sortOrder;
+    this.activities = ACTIVITIES.sort(
+      (a, b) => (a.price - b.price) * this.sortOrder
+    );
+  }
 }

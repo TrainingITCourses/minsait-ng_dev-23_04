@@ -7,9 +7,13 @@ import { ACTIVITY_EMPTY, Activity } from '../../data/activity.type';
   styleUrls: ['./activity-item.component.css'],
 })
 export class ActivityItemComponent implements OnInit {
-  @Input() activity: Activity = ACTIVITY_EMPTY;
+  @Input() public activity: Activity = ACTIVITY_EMPTY;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  isCheap(): boolean {
+    return this.activity.price < 100;
+  }
 }
