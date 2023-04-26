@@ -9,6 +9,9 @@
         formControlName="title"
         [attr.aria-invalid]="form.controls['title'].invalid"
       />
+      <small *ngIf="form.get('title')?.errors && form.get('title')?.touched">{{
+        getErrorMessage("title")
+      }}</small>
     </div>
     <div>
       <label for="location">Location</label>
@@ -18,6 +21,18 @@
         formControlName="location"
         [attr.aria-invalid]="form.controls['location'].invalid"
       />
+      <small>{{ getErrorMessage("location") }}</small>
+    </div>
+    <div>
+      <label for="price">Price Entre 0 y 1000</label>
+      <input
+        type="number"
+        id="price"
+        formControlName="price"
+        placeholder="Entre 0 y 1000"
+        [attr.aria-invalid]="form.controls['price'].invalid"
+      />
+      <small>{{ getErrorMessage("price") }}</small>
     </div>
   </fieldset>
   <button [disabled]="form.invalid" type="submit" (click)="onAddClick()">

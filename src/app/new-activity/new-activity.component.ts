@@ -11,6 +11,10 @@ export class NewActivityComponent implements OnInit {
     {
       title: ['', [Validators.required, Validators.minLength(5)]],
       location: ['Spain', [Validators.required, Validators.minLength(3)]],
+      price: [
+        10,
+        [Validators.required, Validators.min(0), Validators.max(1000)],
+      ],
     },
     {
       validators: [],
@@ -25,5 +29,20 @@ export class NewActivityComponent implements OnInit {
       return;
     }
     console.log(this.form.value);
+  }
+  getErrorMessage(field: string) {
+    const errors = this.form.get(field)?.errors;
+    if (!errors) return;
+    let message;
+    if (errors['required']) {
+      message = 'You must enter a value';
+    } else if (errors['minlength']) {
+      message = 'Min length is 5';
+    } else if (errors['max']) {
+      message = 'Max value is 1000';
+    } else if (errors['min']) {
+      message = 'Min value is 0';
+    }
+    return message;
   }
 }
