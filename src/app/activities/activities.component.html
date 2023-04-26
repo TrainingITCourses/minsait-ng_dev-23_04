@@ -1,2 +1,8 @@
 <h3>Activities Management</h3>
-<pre> {{ activities | json }} </pre>
+<ul>
+  <li *ngFor="let activity of activities">
+    <a [routerLink]="activity.slug">
+      {{ activity.title }}
+    </a>
+  </li>
+</ul>
