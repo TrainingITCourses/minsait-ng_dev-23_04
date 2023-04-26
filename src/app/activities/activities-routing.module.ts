@@ -4,10 +4,19 @@ import { ActivitiesComponent } from './activities.component';
 
 // /cumbre-vieja-exploration
 
+// /new
+
 const routes: Routes = [
   {
     path: '',
     component: ActivitiesComponent,
+  },
+  {
+    path: 'new',
+    loadChildren: () =>
+      import('../new-activity/new-activity.module').then(
+        (m) => m.NewActivityModule
+      ),
   },
   {
     path: ':slug',

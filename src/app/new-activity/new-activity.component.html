@@ -1,0 +1,29 @@
+<h3>Add a new Activity</h3>
+<form [formGroup]="form">
+  <fieldset>
+    <div>
+      <label for="title">Title</label>
+      <input
+        type="text"
+        id="title"
+        formControlName="title"
+        [attr.aria-invalid]="form.controls['title'].invalid"
+      />
+    </div>
+    <div>
+      <label for="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        formControlName="location"
+        [attr.aria-invalid]="form.controls['location'].invalid"
+      />
+    </div>
+  </fieldset>
+  <button [disabled]="form.invalid" type="submit" (click)="onAddClick()">
+    Add
+  </button>
+</form>
+<pre>
+  VALUE: {{ form.value | json }}
+</pre>
