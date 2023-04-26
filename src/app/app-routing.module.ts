@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
+// http://localhost:4200/
+// activities / cumbre - vieja - exploration
+
 const routes: Routes = [
   {
     path: '',

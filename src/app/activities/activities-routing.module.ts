@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActivitiesComponent } from './activities.component';
 
+// /cumbre-vieja-exploration
+
 const routes: Routes = [
   {
     path: '',
