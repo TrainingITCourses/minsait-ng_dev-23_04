@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AGE_CATEGORIES } from '../data/activities.data';
 
 @Component({
   selector: 'app-new-activity',
@@ -15,11 +16,14 @@ export class NewActivityComponent implements OnInit {
         10,
         [Validators.required, Validators.min(0), Validators.max(1000)],
       ],
+      ageCategory: 'adult',
     },
     {
       validators: [],
     }
   );
+
+  ageCategories = AGE_CATEGORIES;
 
   constructor(private formBuilder: FormBuilder) {}
 

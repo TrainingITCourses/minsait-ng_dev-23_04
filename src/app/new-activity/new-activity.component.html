@@ -34,6 +34,17 @@
       />
       <small>{{ getErrorMessage("price") }}</small>
     </div>
+    <div>
+      <label for="ageCategory">Age Category</label>
+      <select id="ageCategory" formControlName="ageCategory">
+        <option
+          *ngFor="let ageCategory of ageCategories"
+          [value]="ageCategory.id"
+        >
+          {{ ageCategory.icon }} {{ ageCategory.caption }}
+        </option>
+      </select>
+    </div>
   </fieldset>
   <button [disabled]="form.invalid" type="submit" (click)="onAddClick()">
     Add
