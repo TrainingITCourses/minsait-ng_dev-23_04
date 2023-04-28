@@ -89,6 +89,27 @@
       "state": "finished",
       "title": "Boat cruise in the Danube",
       "userId": 5
+    },
+    {
+      "title": "Esto es una prueba",
+      "location": "Spain",
+      "price": 10,
+      "ageCategory": "adult",
+      "id": 670
+    },
+    {
+      "title": "Baile regional",
+      "location": "Spain",
+      "price": 10,
+      "ageCategory": "family",
+      "id": 671
+    },
+    {
+      "title": "Esto está vinculado",
+      "location": "Spain",
+      "price": 10,
+      "ageCategory": "adult",
+      "id": 672
     }
   ],
   "ageCategories": [

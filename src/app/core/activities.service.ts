@@ -24,11 +24,17 @@ export class ActivitiesService {
   getBySlug$(slug: string): Observable<Activity[]> {
     // return this.list.filter((a) => a.slug === slug);
     return this.http.get<Activity[]>(
-      'http://localhost:3000/actibities?slug=' + slug
+      'http://localhost:3000/activities?slug=' + slug
     );
   }
 
-  add(activity: Activity): void {
-    this.list.push(activity);
+  add$(activity: Activity): Observable<Activity> {
+    // this.list.push(activity);
+    console.log('llamando....');
+    return this.http.post<Activity>(
+      'http://localhost:3000/activities',
+      activity
+    );
+    //console.log('he llamado!');
   }
 }
