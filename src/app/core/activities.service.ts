@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ACTIVITIES } from '../data/activities.data';
 import { Activity } from '../data/activity.type';
 
@@ -8,10 +10,11 @@ import { Activity } from '../data/activity.type';
 export class ActivitiesService {
   private list: Activity[] = ACTIVITIES;
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getAll(): Activity[] {
-    return this.list;
+  getAll$(): Observable<Activity[]> {
+    // return this.list;
+    return this.http.get<Activity[]>('http://localhost:3000/actibities');
   }
 
   getById(id: string): Activity | undefined {
