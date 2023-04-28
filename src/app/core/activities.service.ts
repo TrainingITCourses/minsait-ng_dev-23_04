@@ -14,15 +14,18 @@ export class ActivitiesService {
 
   getAll$(): Observable<Activity[]> {
     // return this.list;
-    return this.http.get<Activity[]>('http://localhost:3000/actibities');
+    return this.http.get<Activity[]>('http://localhost:3000/activities');
   }
 
   getById(id: string): Activity | undefined {
     return this.list.find((a) => a.id === id);
   }
 
-  getBySlug(slug: string): Activity[] {
-    return this.list.filter((a) => a.slug === slug);
+  getBySlug$(slug: string): Observable<Activity[]> {
+    // return this.list.filter((a) => a.slug === slug);
+    return this.http.get<Activity[]>(
+      'http://localhost:3000/actibities?slug=' + slug
+    );
   }
 
   add(activity: Activity): void {
