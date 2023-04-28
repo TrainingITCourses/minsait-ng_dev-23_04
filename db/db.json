@@ -132,5 +132,11 @@
       "userId": 1
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "lisa@actib.it",
+      "password": "$2a$10$AvQWNx70jU5C4JGHW8ZDd..J3y0mGvs69q1HbtY7RbnkAtMjmSAw6",
+      "id": 1
+    }
+  ]
 }
